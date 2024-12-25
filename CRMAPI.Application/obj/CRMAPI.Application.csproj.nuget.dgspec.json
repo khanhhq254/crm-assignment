@@ -1,0 +1,220 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/CRMAPI.Application.csproj": {}
+  },
+  "projects": {
+    "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/CRMAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/CRMAPI.Application.csproj",
+        "projectName": "CRMAPI.Application",
+        "projectPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/CRMAPI.Application.csproj",
+        "packagesPath": "/Users/khanh/.nuget/packages/",
+        "outputPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/khanh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj": {
+                "projectPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj"
+              },
+              "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/CRMAPI.Infrastructure.csproj": {
+                "projectPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/CRMAPI.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.5-develop.2163, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "MediatR.Contracts": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj",
+        "projectName": "CRMAPI.Domain",
+        "projectPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj",
+        "packagesPath": "/Users/khanh/.nuget/packages/",
+        "outputPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/khanh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/CRMAPI.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/CRMAPI.Infrastructure.csproj",
+        "projectName": "CRMAPI.Infrastructure",
+        "projectPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/CRMAPI.Infrastructure.csproj",
+        "packagesPath": "/Users/khanh/.nuget/packages/",
+        "outputPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/khanh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj": {
+                "projectPath": "/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Domain/CRMAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

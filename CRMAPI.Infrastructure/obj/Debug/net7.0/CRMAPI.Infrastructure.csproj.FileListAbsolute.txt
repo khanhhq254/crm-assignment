@@ -1,0 +1,17 @@
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/bin/Debug/net7.0/CRMAPI.Infrastructure.deps.json
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/bin/Debug/net7.0/CRMAPI.Infrastructure.runtimeconfig.json
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/bin/Debug/net7.0/CRMAPI.Infrastructure.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/bin/Debug/net7.0/CRMAPI.Infrastructure.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/bin/Debug/net7.0/CRMAPI.Domain.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/bin/Debug/net7.0/CRMAPI.Domain.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.csproj.AssemblyReference.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.AssemblyInfoInputs.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.AssemblyInfo.cs
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.csproj.CopyComplete
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/refint/CRMAPI.Infrastructure.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/CRMAPI.Infrastructure.genruntimeconfig.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Infrastructure/obj/Debug/net7.0/ref/CRMAPI.Infrastructure.dll

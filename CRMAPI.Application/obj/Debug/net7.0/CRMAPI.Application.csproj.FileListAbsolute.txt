@@ -1,0 +1,17 @@
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.csproj.AssemblyReference.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.AssemblyInfoInputs.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.AssemblyInfo.cs
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.csproj.CoreCompileInputs.cache
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Application.deps.json
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Application.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Application.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Domain.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Infrastructure.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Domain.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/bin/Debug/net7.0/CRMAPI.Infrastructure.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.csproj.CopyComplete
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/refint/CRMAPI.Application.dll
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/CRMAPI.Application.pdb
+/Users/khanh/Documents/assignment/CRMAPI/CRMAPI.Application/obj/Debug/net7.0/ref/CRMAPI.Application.dll
