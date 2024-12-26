@@ -1,5 +1,6 @@
 using System.Reflection;
 using CRMAPI.Application.Consumers;
+using CRMAPI.Application.Dtos;
 using CRMAPI.Application.Services.CustomerService;
 using CRMAPI.Application.Services.PricingAgreementService;
 using CRMAPI.Application.Services.ProductServices;
@@ -22,6 +23,7 @@ public static class ServiceRegistrator
         
         services.AddMassTransit(x =>
         {
+            x.SetKebabCaseEndpointNameFormatter();
             x.AddConsumer<UpdateCustomerRoleConsumer>(); // Register consumer(s)
             x.AddConsumer<CreatePricingAgreementConsumer>();
 
@@ -56,6 +58,7 @@ public static class ServiceRegistrator
                     e.ConfigureConsumeTopology = false;
                     e.ExchangeType = ExchangeType.Direct;
                     e.AutoDelete = false;
+                    
                     e.ConfigureConsumer<CreatePricingAgreementConsumer>(context);
                 });
             });

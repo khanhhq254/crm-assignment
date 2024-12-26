@@ -1,6 +1,7 @@
 using System.Text.Json;
 using AutoMapper;
 using CRMAPI.Application.Dtos;
+using CRMAPI.Application.Dtos.Messages;
 using CRMAPI.Application.Dtos.PricingAgreement;
 using CRMAPI.Domain.Entities;
 using CRMAPI.Infrastructure.Persistence;
@@ -34,14 +35,16 @@ public class PricingAgreementService : IPricingAgreementService
 
         await _dbContext.SaveChangesAsync(cancellationToken);
 
+        var pricingAgreementDto = _mapper.Map<PricingAgreementDto>(pricingAgreement);
+        
         var publishEndpoint = await _bus.GetSendEndpoint(new Uri("exchange:pricing-agreement?type=direct"));
         
-        await publishEndpoint.Send(new Message()
+        await publishEndpoint.Send(new CreatePricingAgreementMessage()
         {
             Id = new Guid(),
-            Content = JsonSerializer.Serialize(pricingAgreement)
+            PricingAgreement = pricingAgreementDto
         }, cancellationToken);
 
-        return _mapper.Map<PricingAgreementDto>(pricingAgreement);
+        return pricingAgreementDto;
     }
 }

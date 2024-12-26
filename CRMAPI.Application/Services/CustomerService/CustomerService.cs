@@ -2,6 +2,7 @@ using System.Text.Json;
 using AutoMapper;
 using CRMAPI.Application.Dtos;
 using CRMAPI.Application.Dtos.Customer;
+using CRMAPI.Application.Dtos.Messages;
 using CRMAPI.Domain.Entities;
 using CRMAPI.Infrastructure.Persistence;
 using MassTransit;
@@ -14,12 +15,14 @@ public class CustomerService : ICustomerService
     private readonly ApplicationDbContext _dbContext;
     private readonly IMapper _mapper;
     private readonly IBus _bus;
+    private readonly IPublishEndpoint _publishEndpoint;
 
-    public CustomerService(ApplicationDbContext dbContext, IMapper mapper, IBus bus)
+    public CustomerService(ApplicationDbContext dbContext, IMapper mapper, IBus bus, IPublishEndpoint publishEndpoint)
     {
         _dbContext = dbContext;
         _mapper = mapper;
         _bus = bus;
+        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<CustomerDto> CreateNewCustomerAsync(string payload, CancellationToken cancellationToken)
@@ -61,15 +64,17 @@ public class CustomerService : ICustomerService
         _dbContext.Customers.Update(customer);
         
         await _dbContext.SaveChangesAsync(cancellationToken);
+        
+        var customerDto = _mapper.Map<CustomerDto>(customer);
 
         var publishEndpoint = await _bus.GetSendEndpoint(new Uri("exchange:update-customer?type=direct"));
-
-        await publishEndpoint.Send(new Message()
+        
+        await publishEndpoint.Send(new UpdateCustomerMessage()
         {
             Id = Guid.NewGuid(),
-            Content = JsonSerializer.Serialize(customer)
+            Customer = customerDto
         }, cancellationToken);
 
-        return _mapper.Map<CustomerDto>(customer);
+        return customerDto;
     }
 }
