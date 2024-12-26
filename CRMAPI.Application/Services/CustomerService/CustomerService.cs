@@ -14,14 +14,12 @@ public class CustomerService : ICustomerService
     private readonly ApplicationDbContext _dbContext;
     private readonly IMapper _mapper;
     private readonly IBus _bus;
-    private readonly IPublishEndpoint _publishEndpoint;
 
-    public CustomerService(ApplicationDbContext dbContext, IMapper mapper, IBus bus, IPublishEndpoint publishEndpoint)
+    public CustomerService(ApplicationDbContext dbContext, IMapper mapper, IBus bus)
     {
         _dbContext = dbContext;
         _mapper = mapper;
         _bus = bus;
-        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<CustomerDto> CreateNewCustomerAsync(string payload, CancellationToken cancellationToken)
@@ -64,7 +62,9 @@ public class CustomerService : ICustomerService
         
         await _dbContext.SaveChangesAsync(cancellationToken);
 
-        await _publishEndpoint.Publish<Message>(new Message()
+        var publishEndpoint = await _bus.GetSendEndpoint(new Uri("exchange:update-customer?type=direct"));
+
+        await publishEndpoint.Send(new Message()
         {
             Id = Guid.NewGuid(),
             Content = JsonSerializer.Serialize(customer)

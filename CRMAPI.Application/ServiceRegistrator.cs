@@ -34,18 +34,28 @@ public static class ServiceRegistrator
                 });
                 cfg.ConfigureEndpoints(context);
 
-                cfg.ReceiveEndpoint("example_queue", e =>
+                cfg.ReceiveEndpoint("update-customer-queue", e =>
                 {
-                    e.Bind("amq.fanout", bc =>
+                    e.Bind("update-customer", bc =>
                     {
-                        bc.ExchangeType = ExchangeType.Fanout;
-                        bc.AutoDelete = false;
+                        bc.ExchangeType = ExchangeType.Direct;
                     });
+                    e.ConfigureConsumeTopology = false;
+                    e.ExchangeType = ExchangeType.Direct;
+                    e.AutoDelete = false;
+                    
                     e.ConfigureConsumer<UpdateCustomerRoleConsumer>(context);
                 });
                 
-                cfg.ReceiveEndpoint("pricing_agreement_queue", e =>
+                cfg.ReceiveEndpoint("pricing-agreement-queue", e =>
                 {
+                    e.Bind("pricing-agreement", bc =>
+                    {
+                        bc.ExchangeType = ExchangeType.Direct;
+                    });
+                    e.ConfigureConsumeTopology = false;
+                    e.ExchangeType = ExchangeType.Direct;
+                    e.AutoDelete = false;
                     e.ConfigureConsumer<CreatePricingAgreementConsumer>(context);
                 });
             });

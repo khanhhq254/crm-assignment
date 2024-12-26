@@ -13,14 +13,12 @@ public class PricingAgreementService : IPricingAgreementService
     private readonly ApplicationDbContext _dbContext;
     private readonly IMapper _mapper;
     private readonly IBus _bus;
-    private readonly IPublishEndpoint _publishEndpoint;
 
-    public PricingAgreementService(ApplicationDbContext dbContext, IMapper mapper, IBus bus, IPublishEndpoint publishEndpoint)
+    public PricingAgreementService(ApplicationDbContext dbContext, IMapper mapper, IBus bus)
     {
         _dbContext = dbContext;
         _mapper = mapper;
         _bus = bus;
-        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<PricingAgreementDto> CreatePricingAgreementAsync(CreatePricingAgreementRequest request, CancellationToken cancellationToken)
@@ -36,7 +34,9 @@ public class PricingAgreementService : IPricingAgreementService
 
         await _dbContext.SaveChangesAsync(cancellationToken);
 
-        await _publishEndpoint.Publish(new Message()
+        var publishEndpoint = await _bus.GetSendEndpoint(new Uri("exchange:pricing-agreement?type=direct"));
+        
+        await publishEndpoint.Send(new Message()
         {
             Id = new Guid(),
             Content = JsonSerializer.Serialize(pricingAgreement)
